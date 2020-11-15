@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Javascript</title>
+</head>
+
+<body style="font-family: 'Open Sans', sans-serif;">
+  <div class="container">
+    <h1>O grande Javascript</h1>
+
+    <p>
+      Nesse ponto eu espero que você já tenha lido a nota programming.html e feito o Blockly Maze até o nível 9, espero
+      também que você tenha entendido que um programa é composto por entrada -> processamento -> saída. Além disso
+      espero que você tenha entendido para que serve uma variável.
+    </p>
+
+    <p>
+      Seguindo então, vamos começar a programar usando Javascript. Você não precisa de uma linguagem de programação
+      para treinar lógica de programação, como você deve ter visto no Blockly Maze, mas precisa de uma linguagem de
+      programação para construir programas, que no final das contas é o que tem valor comercial. Nós vamos começar com
+      Javascript, eu particularmente não acho a melhor das linguagens, mas comercialmente é o que o mundo usa. Sim, para
+      desenvolvimento web Javascript é a linguagem mais usada no mundo. Olha aqui esse site de vagas para o exterior:
+      <a href="https://stackoverflow.com/jobs?id=459290&q=Javascript">LINK</a>
+      Algumas delas tem a até Visa sponsor, que quer dizer que a empresa te ajuda a se mudar para lá e ainda paga para
+      você toda documentação necessária. Como essa vaga aqui em Londres <a
+        href="https://stackoverflow.com/jobs/459290/frontend-engineer-tessian">LINK</a>. Claro se é a linguagem mais
+      usada do mundo, no Brasil não é diferente, não falta vaga para desenvolvedor Javascript aqui.
+    </p>
+
+    <img src="https://media1.tenor.com/images/c8fc4c71fd9d5d1c6414da763bb5df51/tenor.gif" alt="dinheiro">
+
+    <h2>Vamos a parte técnica então</h2>
+
+    <h4>0 - Comentários</h4>
+
+    <p>
+      Tem uma ferramenta super útil que eu ainda não falei. O <b>comentário</b>. Toda linguagem tem a possibilidade
+      de fazer comentários no código, até o HTML e o CSS, mas não é muito utilizado nessas linguagens, só que aqui no
+      Javascript vai ser mais utilizado. Para que serve? Para comentar! Não tem nenhuma diferença para o computador, o
+      computador simplesmente ignora os comentários, logo, os comentários são usados para que outros programadores
+      entendam melhor o seu código, você pode escrever um pedaço de código e escrever um comentário explicando para que
+      serve esse pedaço de código, exatamente como eu fiz no exemplo abaixo.
+    </p>
+
+    <h4>1 - Bibliotecas</h4>
+
+    <p>
+      Toda linguagem de programação tem funções prontas para alguma coisa, geralmente coisas bem pequenas e simples,
+      assim você não precisa ficar reinventando a roda toda vez que for programar, esses funções prontas são colocadas
+      dentro de bibliotecas de acordo com o que ela faz, por exemplo você pode ter uma biblioteca para quando o usuário
+      digitar coisas no teclado, você pode ter uma biblioteca para imprimir valores na tela, cada biblioteca é separada
+      por funcionalidade, ou seja, todas as funções dentro de uma biblioteca estão juntas porque elas tem algo em comum
+      que é o que caracteriza a biblioteca. No Javascript eu não tenho bons exemplos, mas vamos pegar a Linguagem C que
+      com sorte vocês nunca vão usar, lá tem um biblioteca chamada Math (matemática), dentro dela tem funções para
+      exponenciação, logarítmo, raíz quadrada, etc. Claro você poderia fazer suas próprias funções, mas não faz sentido
+      já que você pode usar das bibliotecas. Daí logo de cara já tenho que falar sobre uma particularidade do
+      Javascript, para algumas bibliotecas você precisa chamar usando o <code>require</code> e salvar ela numa variável.
+      Isso acontece para algumas bibliotecas, outras nem precisa dar <code>require</code> , como por exemplo o console.
+      Bom, não é tão importante assim porque para usar o Javascript com HTML não precisa de bibliotecas, vocês vão ver
+      isso depois.
+    </p>
+
+    <p>
+      Olha esse exemplo, você pode rodar ele apertando no botão <span style="color: green;">Run</span>:
+    </p>
+
+    <iframe height="800px" width="100%" src="https://repl.it/@danilodelyima/hi?lite=true" scrolling="no"
+      frameborder="no" allowtransparency="true" allowfullscreen="true"
+      sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+    <h4>1 - ENTRADA - Variável</h4>
+    <P>
+      No Javascript o comando <code>let</code> é o que define uma variável. Nesse programa temos a variável que armazena
+      a biblioteca e a variável que armazena o que o usuário digitou no teclado. Dê nomes que façam sentido para as
+      variáveis! Você pode escolher, poderia ser 'seunome', mas não fica muito bom, fica difícil de ler, opte pelo
+      simples e fácil e <b>jamais use acentuação nas variáveis ou ç</b>.
+    </P>
+
+    <h4>2 - Saída</h4>
+
+    <p>
+      Por enquanto no Javascript a saída vai ser sempre usando o console, mas saiba que o motivo do Javascript ser
+      amplamente utilizado é porque ele permite manipular dados que estão numa página HTML, você pode adicionar, alterar
+      ou remover dados de uma página HTML usando Javascript.
+    </p>
+
+    <h4>3 - Tipos de dados</h4>
+
+    <p>
+      <b>Importante:</b> dependendo do que você está construindo, sua entrada pode ter tipos diferentes, para um
+      programa que busca palavras em um texto, sua entrada é um texto, para uma calculadora, sua entrada pode ser
+      números. Essa pode não ser uma distinção clara para você, mas é uma distinção necessária para linguagens
+      de programação, portanto toda linguagem de programação precisa que você programador(a) defina qual o tipo do dado.
+      O Javascript tem dois tipo básicos: <code>String</code> e <code>Number</code>, sendo <code>String</code> o tipo
+      usado para texto, ainda que esse texto tenha um único caractere; ou pode ser <code>Number</code> , ainda que seja
+      inteiro ou decimal. Isso é importante porque um número pode ser representado em formato de String, já que você
+      poderia muito bem ter um número dentro de um texto, daí se você tenta somar dois números que estão sendo
+      representados como String não vai funcionar. No Javascript tudo que está sendo representado dentro de aspas, seja
+      ela simples ou dupla ('') ou ("") é considerado String. Agora você sabe que a função question do readline espera
+      que a entrada seja um texto. Fazer operações com String pode ser problemático algumas vezes, olha esse exemplo
+      abaixo:
+    </p>
+
+    <iframe height="800px" width="100%" src="https://repl.it/@danilodelyima/number?lite=true" scrolling="no"
+      frameborder="no" allowtransparency="true" allowfullscreen="true"
+      sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+    <p>
+      Se você remover a linha 6 e usar a linha 10 que está comentada, vai funcionar direito.
+    </p>
+
+    <p>
+      O Javascript tem dois tipos mais complexos. A lista que é chamada também de <code>Array</code>, que serve para
+      armazenar uma lista de itens (quem diria ein), poderia ser por exemplo uma lista de números de telefone ou
+      qualquer outra lista que você imaginar, na prática para a lista de telefones você vai ter cada número de telefone
+      sendo armazenado como String (texto), então no fundo, para o Javascript você está armazenando uma lista de
+      Strings, quem dá significado para ela é o programador, não a linguagem. A forma de usar é assim:
+      <br> <code>let telefones = ["(61) 97430-0325", "(61) 3292-0284", "(61) 2130-2348"]</code> <br>
+      poderia ser uma lista de números que eu gosto (sem criatividade)
+      <br> <code>let numeros = [5, 7, 11, 13.02]</code> <br>
+    </p>
+
+    <p>
+      O outro tipo complexo é o <b>objeto</b>, ele serve para agrupar valores que de alguma forma fazem sentido ficar
+      juntos. Por exemplo, pessoa:
+
+      <br>
+      <code>let pessoa = { nome: "Danilo", idade: "desconhecida", signo: 'Aquário', numeros: [5, 7, 11, 13.02]}</code>
+      <br>
+
+      Você poderia ter as variáveis: <code>let nome, let idade, let signo, let numeros</code>, mas usando objeto fica
+      mais consistente, fica claro como esses dados estão relacionados. Perceba que você pode ter uma lista dentro de um
+      objeto.
+    </p>
+
+    <p>
+      Da mesma forma que você pode ter uma lista dentro de um objeto, você pode também ter uma lista de objetos, nesse
+      caso o objeto descreve uma pessoa, logo você teria uma lista de pessoas.
+
+      <code>
+        <br>
+        let pessoas = [ <br>
+                       { nome: "Danilo", idade: "desconhecida", signo: 'Aquário', numeros: [5, 7, 11, 13.02]}, <br>
+                       { nome: "Gabi", idade: "desconhecida", signo: 'Escorpião', numeros: [10, 13]}
+        <br>]
+
+      </code>
+    </p>
+
+    <p>Perceba que listas e objetos, ainda são formados pelos tipos básicos no final das contas (String e Number)</p>
+
+    <h1>Super Desafio Simples</h1>
+    <p>
+      O programa que eu mostrei pega um nome do teclado e diz "Olá " + nome + ", prazer em te conhcer." Quero que você
+      faça um programa que recebe uma data, pode ser em qualquer formato e diz: "A data que você digitou foi: " + data.
+      em alguma desses dois editores acima, pode escolher. Não precisa me mandar é só rodar e ver se funcionou, se
+      precisar de ajudar é só chamar.
+    </p>
+
+
+    <h1>PARA ESSA SEMANA</h1>
+
+    <p>Como sempre façam junto com o instrutor e coloquem no GIT os projetos. Qualquer dúvida é só chamar.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/i6Oi-YtXnAU" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
+  </div>
+</body>
