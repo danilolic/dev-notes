@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Diferença entre os cursos superiores na área de TI</title>
+</head>
+
+<body style="font-family: 'Open Sans', sans-serif;">
+  <div class="container">
+    <h1>Como as aplicações rodam na Internet</h1>
+    <p>A Internet é dividida em camadas onde cada camada desempenha um papel específico, as camadas são:</p>
+    <img src="https://dominiocurioso.files.wordpress.com/2017/06/camadas-tcp_ip21.jpg?w=327&h=215"
+      alt="camadas da internet">
+
+    <p>
+      dá para dividir em mais camadas por exemplo acesso à rede pode ser divida em <i>camada de enlace</i> e
+      <i>camada física</i>. Nós estamos criando aplicações para Internet, logo a única camada que realmente importa por
+      enquanto é a <i>camada de aplicação</i>. Da camada de aplicação precisamos saber duas coisas:
+    </p>
+
+    <ol>
+      <li>Arquitetura Cliente e Servidor</li>
+      <li>Protocolo HTTP</li>
+    </ol>
+
+    <h2>Arquitetura Cliente e Servidor</h2>
+    <p>
+      Vocês usam essa arquitetura todos os dias quando usam a Internet, só nunca refletiram sobre isso. Quando eu
+      digito no meu navegador <a href="https://github.com">github.com</a> e dou enter ele simplesmente me aparece
+      com a página principal do Github. Nós chamamos isso de <b>requisição</b>, você pediu pela página principal do
+      Github e nas camadas mais baixas da Internet ele pega esse seu pedido para github.com e procura onde está o
+      <b>servidor</b> do Github que nesse caso está na Holanda.
+    </p>
+    <img src="./assets/github-server.png" alt="localização do servidor do github">
+
+    <p>
+      Quando o servidor recebe sua requisição que pede a página principal do Github ele te responde com essa página.
+      Basicamente a Arquitetura Cliente e Servidor se resume a essa dinâmica, nós chamamos de <b>cliente</b> quem pede
+      os recursos e <b>servidor</b> quem te entrega esses recursos. O seu navegador é um cliente o seu aplicativo de
+      celular é um cliente. Um servidor pode responder para qualquer dispositivo desde que esse dispositivo peça as
+      coisas de uma maneira que o servidor entenda e o servidor só entender HTTP. Vale dizer aqui que o que se aprende
+      no desenvolvimento web pode ser exapandido para o desenvolvimento mobile e a única coisa que muda é o cliente, mas
+      o back-end continua sendo o mesmo. O que faz uma grande distinção entre front-end e back-end, o back-end roda no
+      servidor e o front-end roda no seu navegador ou aplicativo, então o que você baixa nas lojas de app na verdade é
+      só o front-end da aplicação.
+    </p>
+
+    <p>
+      Mas uma aplicação web tem vários recursos, como pedir um recurso específico? O Github por exemplo tem usuários,
+      tem repositórios, tem times de desenvolvimento, etc. É bem simples, você pede o recurso pela url olha só:
+      <code>github.com/danilolic/dev-notes</code> Nessa url, você tem a aplicação para qual você está pedindo que é o
+      <b>github.com</b>, dentro da aplicação você está pedindo o repositório <b>dev-notes</b> do usuário
+      <b>danilolic</b>. Talvez isso não seja comum porque nós clicamos em botões dentro da aplicação para mudar de
+      página, mas na prática um link/botão está pedindo para o servidor um novo recurso da aplicação e
+      cada vez que muda de página você está fazendo um pedido para um computador lá na Holanda. Claro para isso
+      funcionar só pode existir uma pessoa chamada danilolic na aplicação, não tem como eu
+      entregar o repositório dev-notes se tem vários usuários com o mesmo nome porque eu não vou saber achar, então aqui
+      nós temos uma regra de back-end. Se eu quisesse pedir um usuário do Github poderia ser assim github.com/danilolic,
+      você pode tentar isso com o seu usuário. Isso vale para qualquer outra aplicação, tenta ver isso no Facebook acho
+      que vocês estão mais familiarizados com os recursos de lá (grupos, eventos amigos, fotos).
+    </p>
+
+    <h2>HTTP</h2>
+    <p>
+      As aplicações usam um protocolo chamado de HTTP. Protocolo é simplesmente uma regra que deve ser
+      respeitada, por exemplo, para falar precisa levantar a mão, esse é um protocolo clássico das escolas. Nós seguimos
+      vários protocolos no dia a dia e os computadores também. Nós usamos o HTTP como protocolo de comunicação entre o
+      cliente e o servidor e se o cliente não respeitar as regras do HTTP o servidor não vai saber como responder ele,
+      pode não ser tão importante como usuário já que os navegadores fazem isso para você, mas é importante como
+      desenvolvedor. O HTTP não é só para pedir recursos para o servidor, na verdade tem uma sigla muito comum usada
+      para descrever o que nós podemos fazer com um recurso do servidor, essa sigla é o C.R.U.D que significa:
+    <ol>
+      <li>C - CREATE (criar)</li>
+      <li>R - READ (ler)</li>
+      <li>U - UPDATE (atualizar)</li>
+      <li>D - DELETE (deletar)</li>
+    </ol>
+    é através do HTTP que o cliente indica qual a intenção dele com o recurso, então para cada sigla do C.R.U.D nós
+    temos o um verbo no HTTP
+    <ol>
+      <li>POST - CREATE</li>
+      <li>GET - READ</li>
+      <li>PUT - UPDATE</li>
+      <li>DELETE - DELETE</li>
+    </ol>
+    A única coisa que gostaria de acrescentar é uma variação do READ, nós podemos por exemplo querer ler um recurso em
+    específico, por exemplo um post no Facebook ou uma lista de posts no Facebook, quando é para ver um único recurso
+    nos chamamos essa ação de <b>show</b> e quando é uma lista chamamos de <b>index</b>, mas perceba que no final das
+    contas ainda se trata de ler um recurso e portanto é feito usando o método GET do HTTP.
+    </p>
+  </div>
+</body>
+
+</html>
